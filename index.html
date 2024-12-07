@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Initial File Selection Screen -->
+  <div id="file-selection-container">
+    <label for="file-input" class="custom-file-label">Select a video file to play</label>
+    <!-- Allow MKV files -->
+    <input type="file" id="file-input" accept="video/*,.mkv" class="hidden-file-input">
+  </div>
+  <div id="mute-status">Unmuted</div>
+
+  <!-- Hidden Video Player -->
+  <div id="video-container" class="hidden resizable">
+    <video id="video-player" controls>
+      <source id="video-source" src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
